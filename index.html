@@ -1,28 +1,129 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 	
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>无标题</title>
+	<title>testweb</title>
 	<link rel="stylesheet" type="text/css" href="css/MyStyle.css" />
-<script src="jquery/jquery-3.4.1.min.js">
-</script>
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<script src="jquery/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="js/MoveEffect.js"></script>
+	<script type="text/javascript" src="js/jquery.progress.js"></script>
 </head>
-
-<body>
-	<div class="wrapper"> 
+<!-->页眉<-->
+<body style="overflow-y: hidden" >   
+  
+	<div>
+		<div class="page" style="position:absolute; top:0px;left:0px;z-index:1;clear:both;text-align:center;">
+		<a><img src="img/images/upmenu.png"></a>
+		</div>
+		
+		<div class="page" id="flip" style="position:absolute; top:40px;left:90px;z-index:2;clear:both;text-align:center;">
+		<a><img src="img/images/pulldown.png"></a>
+		</div>
+		
+		<div class="page" id="panel" style="position:absolute; display:none; top:160px;left:210px;z-index:1;clear:both;text-align:center;">
+		<a><img src="img/images/pulldownmenu.png"></a>
+		</div>
+		
+	</div>
+	<!-->换页的四个小圆点<-->
+	<div>
+		<div  class="page" style="position:fixed; top:440px;left:1800px;z-index:4;clear:both;text-align:center;">
+		<a href="#page1" onclick="topage1()"><img id="pageselect1" src="img/images/pageselected.png"></a>
+		</div>
+		<div  class="page" style="position:fixed; top:480px;left:1800px;z-index:4;clear:both;text-align:center;">
+		<a href="#page2" onclick="topage2()"><img id="pageselect2" src="img/images/pageselect.png"></a>
+		</div>
+		<div  class="page" style="position:fixed; top:520px;left:1800px;z-index:4;clear:both;text-align:center;">
+		<a href="#page3" onclick="topage3()"><img id="pageselect3" src="img/images/pageselect.png"></a>
+		</div>
+		<div  class="page" style="position:fixed; top:560px;left:1800px;z-index:4;clear:both;text-align:center;">
+		<a href="#page4" onclick="topage4()"><img id="pageselect4" src="img/images/pageselect.png"></a>
+		</div>
+		
+	</div>
+	
+	<!-->四页<-->
+	<div>
+	
+		<div  class="page" style="position:absolute; top:0px;left:0px;z-index:-1clear:both;text-align:center;">
+		<a id="page1"><img src="img/images/page1.png"></a>
+		</div>
+		
+		<div class="page" style="position:absolute; top:1080px;left:0px;z-index:-1clear:both;text-align:center;">
+		<a id="page2"><img src="img/images/page2.png"></a>
+		</div>
+		
+		<div class="page" style="position:absolute; top:2160px;left:0px;z-index:-1clear:both;text-align:center;">
+		<a id="page3"><img src="img/images/page3.png"></a>
+		</div>
+		
+		<div class="page" style="position:absolute; top:3240px;left:0px;z-index:-1clear:both;text-align:center;">
+		<a id="page4"><img src="img/images/page4.png"></a>
+		</div>
+	</div>
+	
+	<div class="pre" style="position:absolute; top:500px;left:100px;z-index:1">
+	<a><img src="img/images/leftoward.png"></a>
+	</div>
+	<div class="next" style="position:absolute; top:500px;left:1600px;z-index:1">
+	<a><img src="img/images/righttoward.png"></a>
+	</div>
+	
+	<!-- wrapper  --> 
+	<div class="wrapper"  style="position:absolute; top:179px;left:0px;z-index:0">
+		
 		<div id="focus"> 
+			
+			
 			<ul> 
-			<li><a href="#" target="_blank"><img src="img/01.jpg" width="300" height="300" alt="" /></a></li> 
-			<li><a href="#" target="_blank"><img src="img/02.jpg" width="300" height="300" alt="" /></a></li> 
-			<li><a href="#" target="_blank"><img src="img/03.jpg" width="300" height="300" alt="" /></a></li> 
-			<li><a href="#" target="_blank"><img src="img/04.jpg" width="300" height="300" alt="" /></a></li> 
-			<li><a href="#" target="_blank"><img src="img/05.jpg" width="300" height="300" alt="" /></a></li> 
+			<li><a target="_blank"><img src="img/images/s1.png"  alt="" /></a></li> 
+			<li><a target="_blank"><img src="img/images/s2.png"  alt="" /></a></li> 
+			<li><a target="_blank"><img src="img/images/s3.png"  alt="" /></a></li> 
+			<li><a target="_blank"><img src="img/images/s4.png"  alt="" /></a></li> 
+			<li><a target="_blank"><img src="img/images/s5.png"  alt="" /></a></li> 
+			<li><a target="_blank"><img src="img/images/s6.png"  alt="" /></a></li>
+			<li><a target="_blank"><img src="img/images/s7.png"  alt="" /></a></li> 
 			</ul> 
-		<script type="text/javascript" src="js/MoveEffect.js">
-		</script>
+		
 		</div> 
-	</div><!-- wrapper end --> 
- 
+	</div>
+	
+	<!-- wrapper end --> 
+	<div style="position:absolute; top:2160px;left:0px;z-index:1">
+		<a><img id="light" src="img/images/back.png"></a>
+		
+	</div>
+	<div style="position:absolute; top:2200px;left:90px;z-index:2">
+		<a onclick="lightpage()"><img src="img/images/righttoward.png"></a>
+		
+	</div>
+	
+	
+	<article class="htmleaf-container" style="position:absolute; top:1500px;left:700px;z-index:1">
+		<div class="htmleaf-content">
+			<svg id="container"></svg>
+			
+		</div>
+	</article>
+	
+	<script type="text/javascript">
+	  var progress = $("#container").Progress({
+	  		percent: 0,
+	  		width: 500,
+	  		height: 80,
+	  		fontSize: 20
+	  });
+	  	
+	  
+	  setTimeout(function(){
+	  		progress.percent(99);
+	  		
+	  }, 4000);
+	</script>
+	
 </body>
+
+
 </html>
